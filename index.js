@@ -5,6 +5,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello world!\n');
 });
 
-server.listen(8080, '127.0.0.1', () => {
-  console.log('Server running at http://127.0.0.1:8080/');
-});
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => console.log("Server is running on port 3000"));
